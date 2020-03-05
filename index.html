@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Solid State by HTML5 UP</title>
+    <title>Keyboard Shortcuts</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +10,34 @@
 </head>
 <body>
 <div class="container">
-    <div class="row" id="slider">
-        <div class="col"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row vh-100 align-content-center" id="slide">
+                <div class="col">
+                    <h1 class="text-center font-weight-bold keys">Welcome</h1>
+                    <p id="desc" class="text-center">Keyboard shortcuts explained</p>
+                    <div class="row justify-content-center">
+                        <div class="col-3 bg-dark text-white p-3 text-uppercase text-center" id="key1"></div>
+                        <div class="col-3 bg-warning p-3 text-uppercase text-center" id="key2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 p-3">
+            <div class="row h-100 align-content-center" >
+                <div class="col text-center border-left px-4">
+                    <h2 id="title2"></h2>
+                    <p id="desc2" class="text-justify" style="white-space: pre-line;">Student ID</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<script src="js/jquery-3.4.1.min.js" />
-<script src="js/bootstrap.bundle.min.js" />
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.hotkeys.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
