@@ -38,9 +38,18 @@ $(document).ready(function (event) {
             });
             console.log(keys);
 
+            $(document).unbind('keyup');
+            $(document).bind('keyup', 'left', function (evt) {
+                evt.preventDefault();
+                console.log(data);
+                console.log(i);
+                displayHtml(data[--i]);
+
+                return false;
+            });
+
             $(document).bind('keyup', keys, function (evt) {
                 evt.preventDefault();
-                $('#_esc').addClass('dirty');
                 console.log(keys);
                 display(data[++i], data);
                 return false;
@@ -59,14 +68,14 @@ $(document).ready(function (event) {
     $.getJSON('keys.json').done(function (data) {
         console.log(data);
         display(data[0], data);
-        displayHtml(data[0]);
-        $(document).bind('keyup', 'left', function (evt) {
+        //displayHtml(data[0]);
+        /*$(document).bind('keyup', 'left', function (evt) {
             evt.preventDefault();
             console.log(data);
             console.log(i);
             displayHtml(data[--i]);
 
             return false;
-        });
+        });*/
     });
 });
