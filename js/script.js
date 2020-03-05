@@ -21,7 +21,7 @@ $(document).ready(function (event) {
     function displayHtml(slide) {
         $('h1.keys').html(slide.title);
         $('#key1').html((slide.keyCombination[0] == 'return' ? 'enter' : slide.keyCombination[0]));
-        $('#key2').html(slide.keyCombination[1] !== 'undefined' ? slide.keyCombination[1] : '');
+        $('#key2').html(slide.keyCombination[1] !== '' ? (slide.keyCombination[1] == 'return' ? 'enter' : slide.keyCombination[1]) : '');
         $('#desc').html(slide.description);
         $('#title2').html(slide.title2);
         $('#desc2').html(slide.desc2);
