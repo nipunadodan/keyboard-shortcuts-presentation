@@ -43,7 +43,8 @@ $(document).ready(function (event) {
                 evt.preventDefault();
                 console.log(data);
                 console.log(i);
-                displayHtml(data[--i]);
+                if (i > 0 )
+                    display(data[--i], data);
 
                 return false;
             });
