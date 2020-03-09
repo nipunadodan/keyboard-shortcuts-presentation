@@ -25,6 +25,13 @@ $(document).ready(function (event) {
         $('#desc').html(slide.description);
         $('#title2').html(slide.title2);
         $('#desc2').html(slide.desc2);
+        if( slide.hasOwnProperty("image")) {
+            $('#image').html('<img class="img-fluid" src="images/'+slide.image+'">');
+            $('#imagealt').html(slide.imagealt);
+        }else{
+            $('#image').html('');
+            $('#imagealt').html('');
+        }
     }
 
     var i = 0;
@@ -45,6 +52,15 @@ $(document).ready(function (event) {
                 console.log(i);
                 if (i > 0 )
                     display(data[--i], data);
+
+                return false;
+            });
+            $(document).bind('keyup', 'right', function (evt) {
+                evt.preventDefault();
+                console.log(data);
+                console.log(i);
+                if (i > 0 )
+                    display(data[++i], data);
 
                 return false;
             });
